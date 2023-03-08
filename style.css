@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap");
-
 * {
   padding: 0rem;
   margin: 0rem;
   box-sizing: border-box;
-  font-family: "Libre Baskerville", serif;
 }
 
 html {
@@ -12,75 +9,129 @@ html {
 }
 
 header {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
   font-size: 4rem;
-  height: 7rem;
-  background-color: rgba(255, 255, 255, 0.937);
+}
+
+main {
+  background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/f0f7802227f957d3af0c338f/vbvbbv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.outer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.inner-container-1,
+.inner-container-2 {
+  width: 50%;
+  height: 100vh;
+}
+.inner-container-1 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/f0f7802227f957d3af0c338f/vbvbbv.jpg);
+.inner-container-2 {
+  background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/16bc7d314e0658b4b26b0dc3/dfdf.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-.outerdiv {
-  width: 100%;
-  height: 100%;
+.inner-inner-container-1 {
+  margin-bottom: 70px;
+  margin-left: 100px;
 }
 
-.innerdiv {
-  position: absolute;
-  left: 13%;
-  top: 25%;
-}
-
-h1 {
-  font-family: "Barlow", sans-serif;
-  width: 45rem;
+#id1 {
   color: aliceblue;
-  font-size: 5rem;
-}
-p {
-  width: 45rem;
+
+  font-size: 4.8rem;
+  width: 500px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(155, 90, 225, 0.883);
-  font-size: 1.8rem;
+}
+
+#id2 {
+  color: #8d50d1ff;
   margin-top: 20px;
-  line-height: 29px;
-}
-
-button {
-  border: 1px solid rgb(104, 104, 127);
-  margin-top: 30px;
-  font-size: 2.5rem;
-  border-radius: 70px;
-  width: 20rem;
-  height: 5rem;
-  background-color: rgb(231, 37, 231);
-  color: rgb(254, 240, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-button:hover {
-  background-color: rgba(0, 255, 255, 0.752);
+  font-size: 1.9rem;
+  line-height: 30px;
+  width: 46rem;
 }
 
-#img1 {
-  position: absolute;
-  right: 0;
-  width: 50vw;
+#id3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  margin-top: 30px;
+  width: 17rem;
+  height: 4.5rem;
+  background-color: rgb(255, 56, 232);
+  color: white;
+  border-radius: 50px;
+  border-color: transparent;
+}
+
+#id3:hover {
+  background-color: rgb(0, 123, 255);
 }
 
 footer {
-  background-color: rgb(43, 39, 39);
-  height: 8rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
   display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 6rem;
   justify-content: center;
   align-items: center;
-  font-size: 3.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: aliceblue;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .outer-container {
+    flex-direction: column;
+  }
+  .inner-container-1,
+  .inner-container-2 {
+    width: 100%;
+    height: 80vh;
+  }
+  .inner-inner-container-1 {
+    margin: 0rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .inner-container-2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+  html {
+    font-size: 45%;
+  }
+  .inner-inner-container-1 {
+    width: 50rem;
+  }
+  .inner-container-1 {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  html {
+    font-size: 36%;
+  }
+  .inner-container-1 {
+    height: 50vh;
+  }
+  .inner-container-2 {
+    height: 50vh;
+  }
 }
